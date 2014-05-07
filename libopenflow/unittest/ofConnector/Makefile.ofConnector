@@ -1,0 +1,8 @@
+#you can use static_libs=1/0 ,to build static lib or dynamiclib
+MYBIN=ofConnector_unittest
+MYFILES = \
+  COfConnector_unittest.cpp
+MYCPPFLAGS= -I../include -I../src/ofConnector -I$(ACE_ROOT) -I$(LIBOFCONNECTOR_INCLUDE) -DCM_LINUX -DCM_UNIX -DCM_DEBUG -DCM_SUPPORT_T120_UTIL
+MYLDFLAGS= -L$(LIBOFCONNECTOR_ROOT)/src/ofConnector
+MYDLLLIB= -lofConnector -lpthread -lm -lrt -ldl
+include $(ACE_ROOT)/include/makeinclude/templatemakefilebin.GNU

@@ -1,0 +1,7 @@
+#you can use static_libs=1/0 ,to build static lib or dynamiclib
+MYLIBNAME=ofConnector
+MYFILES = \
+  COfConnector.cpp
+MYCPPFLAGS= -I$(ACE_ROOT) -I./ -I$(LIBOFCONNECTOR_INCLUDE) -std=gnu++0x
+MYLDFLAGS=
+include $(ACE_ROOT)/include/makeinclude/templatemakefile.GNU  

@@ -1,0 +1,19 @@
+#you can use static_libs=1/0 ,to build static lib or dynamiclib
+MYBIN=openflow_unittest
+MYFILES = OpenFlowMessage_main_unittest.cpp
+MYCPPFLAGS= -I./ \
+	-I$(ACE_INCLUDE) \
+	-I$(ACE_INCLUDE)/ace\
+	-I$(LIBOPENFLOW_ACE_INCLUDE)\
+    -I$(GTEST_INCLUDE) \
+	-DLINUX -DUNIX \
+	-DXML_PROF \
+	-Wno-deprecated \
+	-DCM_SUPPORT_T120_UTIL \
+	-DJS_BYTES_PER_BYTE=1 \
+	-DJS_BYTES_PER_SHORT=2 \
+	-DJS_BYTES_PER_INT=4 \
+	-std=gnu++0x    
+MYLDFLAGS= -L$(GTEST_LIB_PATH) -L$(LIBOPENFLOW_ACE_ROOT)/src/openflow/
+MYDLLLIB= -lm -lrt -lpthread -lutil -ldl -lgtest -lopenflow
+include $(ACE_ROOT)/include/makeinclude/templatemakefilebin.GNU

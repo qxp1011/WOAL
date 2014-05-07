@@ -1,0 +1,6 @@
+Functions of the directories under the current path:
+
+ofConnector   to connect with openflow controller
+openflow      to decode and code openflow messages
+
+All the above features are atop ACE.

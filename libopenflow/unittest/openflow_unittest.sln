@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openflow", "openflow\openflow.vcxproj", "{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B} = {B99E0773-AFBD-41D6-B5D8-A2660FAA229B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest-md", "..\..\..\contrib\gtest\msvc\gtest-md.vcxproj", "{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest_main-md", "..\..\..\contrib\gtest\msvc\gtest_main-md.vcxproj", "{3AF54C8A-10BF-4332-9147-F68ED9862033}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACE", "..\..\..\ace\ACE_wrappers\ace\ACE_vc11.vcxproj", "{47BC56EC-FECA-1BAD-6757-8A6300006755}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenFlowStack", "..\OpenFlowStack.vcxproj", "{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}.Debug|Win32.Build.0 = Debug|Win32
+		{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}.Debug|x64.ActiveCfg = Debug|Win32
+		{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}.Release|Win32.ActiveCfg = Release|Win32
+		{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}.Release|Win32.Build.0 = Release|Win32
+		{A586AAFD-B66B-498E-BA2B-9DFFE00AAF81}.Release|x64.ActiveCfg = Release|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}.Debug|Win32.Build.0 = Debug|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}.Debug|x64.ActiveCfg = Debug|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}.Release|Win32.ActiveCfg = Release|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}.Release|Win32.Build.0 = Release|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE8}.Release|x64.ActiveCfg = Release|Win32
+		{3AF54C8A-10BF-4332-9147-F68ED9862033}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3AF54C8A-10BF-4332-9147-F68ED9862033}.Debug|Win32.Build.0 = Debug|Win32
+		{3AF54C8A-10BF-4332-9147-F68ED9862033}.Debug|x64.ActiveCfg = Debug|Win32
+		{3AF54C8A-10BF-4332-9147-F68ED9862033}.Release|Win32.ActiveCfg = Release|Win32
+		{3AF54C8A-10BF-4332-9147-F68ED9862033}.Release|Win32.Build.0 = Release|Win32
+		{3AF54C8A-10BF-4332-9147-F68ED9862033}.Release|x64.ActiveCfg = Release|Win32
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Debug|Win32.ActiveCfg = Debug|Win32
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Debug|Win32.Build.0 = Debug|Win32
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Debug|x64.ActiveCfg = Debug|x64
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Debug|x64.Build.0 = Debug|x64
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Release|Win32.ActiveCfg = Release|Win32
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Release|Win32.Build.0 = Release|Win32
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Release|x64.ActiveCfg = Release|x64
+		{47BC56EC-FECA-1BAD-6757-8A6300006755}.Release|x64.Build.0 = Release|x64
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}.Debug|Win32.Build.0 = Debug|Win32
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}.Debug|x64.ActiveCfg = Debug|Win32
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}.Release|Win32.ActiveCfg = Release|Win32
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}.Release|Win32.Build.0 = Release|Win32
+		{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

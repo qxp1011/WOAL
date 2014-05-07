@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B99E0773-AFBD-41D6-B5D8-A2660FAA229B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..;..\..\ace\ACE_wrappers;.\include\openflow;.\include\ofConnector;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ofconnector\COfConnector.cpp" />
+    <ClCompile Include="src\openflow\COFP10Action.cpp" />
+    <ClCompile Include="src\openflow\COFPAction.cpp" />
+    <ClCompile Include="src\openflow\COFPAsyncConfig.cpp" />
+    <ClCompile Include="src\openflow\COFPBucket.cpp" />
+    <ClCompile Include="src\openflow\COFPEchoReplyMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPEchoRequestMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPErrorMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPExperimenterMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPFeaturesReplyMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPFeaturesRequestMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPFlowModMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPFlowRemovedMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPGetConfigRequestMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPGroupModMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPHelloMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPInstruction.cpp" />
+    <ClCompile Include="src\openflow\COFPMatch.cpp" />
+    <ClCompile Include="src\openflow\COFPMessage.cpp" />
+    <ClCompile Include="src\openflow\COFPMeterBand.cpp" />
+    <ClCompile Include="src\openflow\COFPMeterModMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPAggregateFlowStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPDescriptionMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPFlowStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPGroupDescriptionMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPGroupFeaturesMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPGroupStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPMeterConfigStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPMeterFeaturesStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPMeterStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPPortDescriptionMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPPortStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPQueueStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPTableFeaturesMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMPTableStatisticsMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPMultipartMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPPacketInMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPPacketOutMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPPacketQueue.cpp" />
+    <ClCompile Include="src\openflow\COFPPort.cpp" />
+    <ClCompile Include="src\openflow\COFPPortModMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPPortStatusMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPQueueGetConfigReplyMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPQueueGetConfigRequestMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPRoleMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPStatsMsgHeader.cpp" />
+    <ClCompile Include="src\openflow\COFPStatsReplyMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPStatsRequestMsg.cpp" />
+    <ClCompile Include="src\openflow\COFPSwitchConfig.cpp" />
+    <ClCompile Include="src\openflow\COFPTableFeatureProp.cpp" />
+    <ClCompile Include="src\openflow\COFPTableModMsg.cpp" />
+    <ClCompile Include="src\openflow\OFPMessageUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config\mconfig.h" />
+    <ClInclude Include="include\ofconnector\COfConnector.h" />
+    <ClInclude Include="include\openflow\BaseDefine.h" />
+    <ClInclude Include="include\openflow\ByteOrder.h" />
+    <ClInclude Include="include\openflow\CmError.h" />
+    <ClInclude Include="include\openflow\COFP10Action.h" />
+    <ClInclude Include="include\openflow\COFPAction.h" />
+    <ClInclude Include="include\openflow\COFPAsyncConfig.h" />
+    <ClInclude Include="include\openflow\COFPBarrierMsg.h" />
+    <ClInclude Include="include\openflow\COFPBucket.h" />
+    <ClInclude Include="include\openflow\COFPEchoReplyMsg.h" />
+    <ClInclude Include="include\openflow\COFPEchoRequestMsg.h" />
+    <ClInclude Include="include\openflow\COFPErrorMsg.h" />
+    <ClInclude Include="include\openflow\COFPExperimenterMsg.h" />
+    <ClInclude Include="include\openflow\COFPFeaturesReplyMsg.h" />
+    <ClInclude Include="include\openflow\COFPFeaturesRequestMsg.h" />
+    <ClInclude Include="include\openflow\COFPFlowModMsg.h" />
+    <ClInclude Include="include\openflow\COFPFlowRemovedMsg.h" />
+    <ClInclude Include="include\openflow\COFPGetAsyncReplyMsg.h" />
+    <ClInclude Include="include\openflow\COFPGetAsyncRequestMsg.h" />
+    <ClInclude Include="include\openflow\COFPGetConfigReplyMsg.h" />
+    <ClInclude Include="include\openflow\COFPGetConfigRequestMsg.h" />
+    <ClInclude Include="include\openflow\COFPGroupModMsg.h" />
+    <ClInclude Include="include\openflow\COFPHelloMsg.h" />
+    <ClInclude Include="include\openflow\COFPInstruction.h" />
+    <ClInclude Include="include\openflow\COFPMatch.h" />
+    <ClInclude Include="include\openflow\COFPMessage.h" />
+    <ClInclude Include="include\openflow\COFPMeterBand.h" />
+    <ClInclude Include="include\openflow\COFPMeterModMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPAggregateFlowStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPDescriptionMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPExperimenterMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPFlowStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPGroupDescriptionMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPGroupFeaturesMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPGroupStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPMeterConfigStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPMeterFeaturesStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPMeterStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPPortDescriptionMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPPortStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPQueueStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPTableFeaturesMsg.h" />
+    <ClInclude Include="include\openflow\COFPMPTableStatisticsMsg.h" />
+    <ClInclude Include="include\openflow\COFPMultipartMsg.h" />
+    <ClInclude Include="include\openflow\COFPPacketInMsg.h" />
+    <ClInclude Include="include\openflow\COFPPacketOutMsg.h" />
+    <ClInclude Include="include\openflow\COFPPacketQueue.h" />
+    <ClInclude Include="include\openflow\COFPPort.h" />
+    <ClInclude Include="include\openflow\COFPPortModMsg.h" />
+    <ClInclude Include="include\openflow\COFPPortStatusMsg.h" />
+    <ClInclude Include="include\openflow\COFPQueueGetConfigReplyMsg.h" />
+    <ClInclude Include="include\openflow\COFPQueueGetConfigRequestMsg.h" />
+    <ClInclude Include="include\openflow\COFPRoleMsg.h" />
+    <ClInclude Include="include\openflow\COFPSetAsyncMsg.h" />
+    <ClInclude Include="include\openflow\COFPSetConfigMsg.h" />
+    <ClInclude Include="include\openflow\COFPStatsMsgHeader.h" />
+    <ClInclude Include="include\openflow\COFPStatsReplyMsg.h" />
+    <ClInclude Include="include\openflow\COFPStatsRequestMsg.h" />
+    <ClInclude Include="include\openflow\COFPSwitchConfig.h" />
+    <ClInclude Include="include\openflow\COFPTableFeatureProp.h" />
+    <ClInclude Include="include\openflow\COFPTableModMsg.h" />
+    <ClInclude Include="include\openflow\IOFPMsgParser.h" />
+    <ClInclude Include="include\openflow\OFPMessageUtils.h" />
+    <ClInclude Include="include\openflow\openflow-1.0.h" />
+    <ClInclude Include="include\openflow\openflow-1.1.h" />
+    <ClInclude Include="include\openflow\openflow-1.2.h" />
+    <ClInclude Include="include\openflow\openflow-1.3.h" />
+    <ClInclude Include="include\openflow\openflow-common.h" />
+    <ClInclude Include="include\openflow\openflow.h" />
+    <ClInclude Include="include\openflow\types.h" />
+    <ClInclude Include="include\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ace\ACE_wrappers\ace\ACE_vc11.vcxproj">
+      <Project>{47bc56ec-feca-1bad-6757-8a6300006755}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

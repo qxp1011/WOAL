@@ -1,0 +1,56 @@
+#you can use static_libs=1/0 ,to build static lib or dynamiclib
+MYLIBNAME=openflow
+MYFILES = \
+	COFPMessage.cpp\
+	OFPMessageUtils.cpp\
+	COFPPort.cpp\
+	COFPPacketQueue.cpp\
+	COFPMatch.cpp\
+	COFPInstruction.cpp\
+	COFPAction.cpp\
+	COFP10Action.cpp\
+	COFPBucket.cpp\
+	COFPMeterBand.cpp\
+	COFPTableFeatureProp.cpp\
+	COFPEchoRequestMsg.cpp\
+	COFPEchoReplyMsg.cpp\
+	COFPHelloMsg.cpp\
+	COFPErrorMsg.cpp\
+	COFPFlowRemovedMsg.cpp\
+	COFPPortStatusMsg.cpp\
+	COFPPacketInMsg.cpp\
+	COFPFeaturesRequestMsg.cpp\
+	COFPFeaturesReplyMsg.cpp\
+	COFPTableModMsg.cpp\
+	COFPSwitchConfig.cpp\
+	COFPFlowModMsg.cpp\
+	COFPGroupModMsg.cpp\
+	COFPPortModMsg.cpp\
+	COFPMeterModMsg.cpp\
+	COFPMultipartMsg.cpp\
+	COFPMPDescriptionMsg.cpp\
+	COFPMPFlowStatisticsMsg.cpp\
+	COFPMPAggregateFlowStatisticsMsg.cpp\
+	COFPMPTableStatisticsMsg.cpp\
+	COFPMPTableFeaturesMsg.cpp\
+	COFPMPPortStatisticsMsg.cpp\
+	COFPMPPortDescriptionMsg.cpp\
+	COFPMPQueueStatisticsMsg.cpp\
+	COFPMPGroupStatisticsMsg.cpp\
+	COFPMPGroupDescriptionMsg.cpp\
+	COFPMPGroupFeaturesMsg.cpp\
+	COFPMPMeterStatisticsMsg.cpp\
+	COFPMPMeterConfigStatisticsMsg.cpp\
+	COFPMPMeterFeaturesStatisticsMsg.cpp\
+	COFPQueueGetConfigRequestMsg.cpp\
+	COFPQueueGetConfigReplyMsg.cpp\
+	COFPPacketOutMsg.cpp\
+	COFPRoleMsg.cpp\
+	COFPAsyncConfig.cpp\
+	COFPStatsMsgHeader.cpp\
+	COFPStatsRequestMsg.cpp\
+	COFPStatsReplyMsg.cpp\
+	COFPExperimenterMsg.cpp
+MYCPPFLAGS= -I./ -I$(ACE_INCLUDE) -I$(ACE_INCLUDE)/ace -I$(LIBOPENFLOW_ACE_INCLUDE) -DLINUX -DUNIX -Wno-deprecated -std=gnu++0x
+MYLDFLAGS=
+include $(ACE_ROOT)/include/makeinclude/templatemakefile.GNU  
