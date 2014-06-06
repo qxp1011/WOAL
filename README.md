@@ -1,7 +1,7 @@
-GOAL
+WOAL
 ====
 
-Gara OpenFlow Application Libray is an open source libaray for openflow, supported by Gara Team.
+Gara OpenFlow Application Libray is an open source libaray for openflow, supported by WFNEX Team.
 
 How to build
 Firstly, set the compilation environment. 
